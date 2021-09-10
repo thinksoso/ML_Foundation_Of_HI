@@ -180,7 +180,7 @@ def bag_of_word(df):
     bag_of_word = create_dictionary(df)  # 词袋列表，同时给df增加一个新的列Set_of_word
     dimension = len(bag_of_word)
     # 设置一个矩阵，用来盛放每条数据的词袋向量，顺序与df一致，大小为词汇数量*样本数量
-    word_matrix = np.zeros((dimension, amount), dtype='i1')
+    word_matrix = np.zeros((dimension, amount), dtype='i1') # int8
     # 遍历数据，填充word_matrix，对于每一行的样本，先将其按照单词拆为列表，然后找到每个单词在word_matrix中的位置，将其数值加1
     word_to_index = {}  # 一个词汇→索引的字典
     index_to_word = {}  # 一个索引→词汇的字典
